@@ -1,4 +1,4 @@
-# SunSonSolarWebApp
+# SunSonSolarWebApp (Team Name: F4)
 A web app to help SunSonSolar to efficiently process their current processes.
 
 · ‎Katherine sinagaraw (kat) Founder of SunSon Solar, together with his father Santio Sinagaraw (Sonny) 
