@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div class="reg-container">
+        <div class="registration-form">
+            <h1>Welcome to SunSonSolar</h1>
+            <p>Please fill out the form below to create an account.</p>
+            <form action="" method="POST">
+                <div id="reg-form">
+                    <input type="text" placeholder="First Name" name="first_name" required>
+                    <input type="text" placeholder="Last Name" name="last_name" required>
+                    <input type="text" placeholder="Middle Name" name="middle_name" required>
+                    <input type="date" placeholder="Birthdate" name="birthdate" required>
+                    <div class="gender-group">
+                        <label id="gender-label">Gender</label>
+                        <div class="gender-options">
+                            <label class="gender-option" for="male">
+                                <input type="radio" id="male" name="gender" value="male" required>
+                                <span>Male</span>
+                            </label>
+                            <label class="gender-option" for="female">
+                                <input type="radio" id="female" name="gender" value="female" required>
+                                <span>Female</span>
+                            </label>
+                        </div>
+                    </div>
+                    <input type="email" placeholder="Email" name="email" required>
+                    <input type="number" placeholder="Phone Number" name="phone_number" required>
+                    <input type="text" placeholder="Address" name="address" required>
+                    <input type="text" placeholder="Username" name="username" required>
+                    <input type="password" placeholder="Password" name="password" required>
+                </div>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
