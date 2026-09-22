@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script type="module" src="main.js"></script>
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-form login-form">
+            <img class="site-logo" src="assets/logo-sss.png" alt="SunSonSolar logo">
+            <h1>Welcome to SunSonSolar</h1>
+            <p>Please enter your credentials to log in.</p>
+            <form id="login-form">
+                <div class="form-fields">
+                    <input type="text" placeholder="Email or username" name="login" autocomplete="username" required>
+                    <div class="password-field">
+                        <input type="password" placeholder="Password" name="password" required>
+                        <button class="password-toggle" type="button" aria-label="Show password" aria-pressed="false"><i class="fa-solid fa-eye" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+                <button type="submit">Login</button>
+                <p class="form-message" role="status" aria-live="polite"></p>
+                <p>Don't have an account? <a href="registration.html">Register</a></p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
