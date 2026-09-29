@@ -49,8 +49,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `first_name`, `last_name`, `middle_name`, `birthdate`, `gender`, `email`, `phone_number`, `address`, `username`, `password_hash`, `role`, `department`, `created_at`) VALUES
-(1, 'Katherine', 'Sinagaraw', 'Kat', '2026-09-22', 'Female', 'kat@sunsonsolar.com', '+639123456789', 'Pasig City', 'Kittykat16', '$2y$10$RWX0Da/Amu2ZNmyP53yf5e7D/sxEmAo8hkTHUNaQ8T3rsj9LWiTvW', 'admin', NULL, '2026-09-22 11:43:40'),
-(2, 'Sol', 'Solis', 'Soli', '2026-09-22', 'Female', 'solsolis@sunsonsolar.com', '+639987456321', 'Pasig City', 'admin', '$2y$10$Q.9NH0YvLjcoKEJ/ph/yHegWXf9.sG/7wtIj/DpsfX01C03ezg3Xq', 'admin', NULL, '2026-09-22 11:43:40'),
+(1, 'Katherine', 'Sinagaraw', 'Olap', '1990-06-01', 'Female', 'katherine.sinagaraw@sunsonsolar.com', '+639291230983', 'Pasig City', 'Kittykat16', '$2y$10$RWX0Da/Amu2ZNmyP53yf5e7D/sxEmAo8hkTHUNaQ8T3rsj9LWiTvW', 'admin', NULL, '2026-09-22 11:43:40'),
+(2, 'Sun', 'Son', 'Solis', '1967-01-08', 'Female', 'sol.solis@sunsonsolar.com', '+639987456321', 'Pasig City', 'admin', '$2y$10$Q.9NH0YvLjcoKEJ/ph/yHegWXf9.sG/7wtIj/DpsfX01C03ezg3Xq', 'admin', NULL, '2026-09-22 11:43:40'),
 (3, 'Trestan', 'Pacalioga', 'Allas', '2005-12-30', 'male', 'trestanallas1230@gmail.com', '+639945015944', '2052', 'tantan', '$2y$10$y./OOq8ywt9QdkbqGoh8YeeR4CPQ6bkJYk9eG/X5bTJhqS3hmlOUu', 'customer', NULL, '2026-09-22 11:45:14');
 
 --
