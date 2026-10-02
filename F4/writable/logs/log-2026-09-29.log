@@ -1,0 +1,204 @@
+CRITICAL - 2026-09-29 12:11:20 --> TypeError: CodeIgniter\HTTP\Request::fetchGlobal(): Argument #3 ($filter) must be of type ?int, string given, called in C:\xampp\htdocs\Sun_Son_Solar\system\HTTP\IncomingRequest.php on line 587
+[Method: POST, Route: login]
+in SYSTEMPATH\HTTP\RequestTrait.php on line 288.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(587): CodeIgniter\HTTP\Request->fetchGlobal('post', 'display_name', '', null)
+ 2 APPPATH\Controllers\AuthController.php(39): CodeIgniter\HTTP\IncomingRequest->getPost('display_name', '')
+ 3 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->handleLogin()
+ 4 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Sun_Son_Solar\\public\\index.php')
+CRITICAL - 2026-09-29 12:11:25 --> TypeError: CodeIgniter\HTTP\Request::fetchGlobal(): Argument #3 ($filter) must be of type ?int, string given, called in C:\xampp\htdocs\Sun_Son_Solar\system\HTTP\IncomingRequest.php on line 587
+[Method: POST, Route: login]
+in SYSTEMPATH\HTTP\RequestTrait.php on line 288.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(587): CodeIgniter\HTTP\Request->fetchGlobal('post', 'display_name', '', null)
+ 2 APPPATH\Controllers\AuthController.php(39): CodeIgniter\HTTP\IncomingRequest->getPost('display_name', '')
+ 3 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->handleLogin()
+ 4 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Sun_Son_Solar\\public\\index.php')
+CRITICAL - 2026-09-29 12:11:26 --> TypeError: CodeIgniter\HTTP\Request::fetchGlobal(): Argument #3 ($filter) must be of type ?int, string given, called in C:\xampp\htdocs\Sun_Son_Solar\system\HTTP\IncomingRequest.php on line 587
+[Method: POST, Route: login]
+in SYSTEMPATH\HTTP\RequestTrait.php on line 288.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(587): CodeIgniter\HTTP\Request->fetchGlobal('post', 'display_name', '', null)
+ 2 APPPATH\Controllers\AuthController.php(39): CodeIgniter\HTTP\IncomingRequest->getPost('display_name', '')
+ 3 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->handleLogin()
+ 4 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Sun_Son_Solar\\public\\index.php')
+CRITICAL - 2026-09-29 12:11:27 --> TypeError: CodeIgniter\HTTP\Request::fetchGlobal(): Argument #3 ($filter) must be of type ?int, string given, called in C:\xampp\htdocs\Sun_Son_Solar\system\HTTP\IncomingRequest.php on line 587
+[Method: POST, Route: login]
+in SYSTEMPATH\HTTP\RequestTrait.php on line 288.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(587): CodeIgniter\HTTP\Request->fetchGlobal('post', 'display_name', '', null)
+ 2 APPPATH\Controllers\AuthController.php(39): CodeIgniter\HTTP\IncomingRequest->getPost('display_name', '')
+ 3 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->handleLogin()
+ 4 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Sun_Son_Solar\\public\\index.php')
+CRITICAL - 2026-09-29 12:11:28 --> TypeError: CodeIgniter\HTTP\Request::fetchGlobal(): Argument #3 ($filter) must be of type ?int, string given, called in C:\xampp\htdocs\Sun_Son_Solar\system\HTTP\IncomingRequest.php on line 587
+[Method: POST, Route: login]
+in SYSTEMPATH\HTTP\RequestTrait.php on line 288.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(587): CodeIgniter\HTTP\Request->fetchGlobal('post', 'display_name', '', null)
+ 2 APPPATH\Controllers\AuthController.php(39): CodeIgniter\HTTP\IncomingRequest->getPost('display_name', '')
+ 3 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->handleLogin()
+ 4 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Sun_Son_Solar\\public\\index.php')
+CRITICAL - 2026-09-29 12:11:28 --> TypeError: CodeIgniter\HTTP\Request::fetchGlobal(): Argument #3 ($filter) must be of type ?int, string given, called in C:\xampp\htdocs\Sun_Son_Solar\system\HTTP\IncomingRequest.php on line 587
+[Method: POST, Route: login]
+in SYSTEMPATH\HTTP\RequestTrait.php on line 288.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(587): CodeIgniter\HTTP\Request->fetchGlobal('post', 'display_name', '', null)
+ 2 APPPATH\Controllers\AuthController.php(39): CodeIgniter\HTTP\IncomingRequest->getPost('display_name', '')
+ 3 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->handleLogin()
+ 4 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Sun_Son_Solar\\public\\index.php')
+CRITICAL - 2026-09-29 12:11:28 --> TypeError: CodeIgniter\HTTP\Request::fetchGlobal(): Argument #3 ($filter) must be of type ?int, string given, called in C:\xampp\htdocs\Sun_Son_Solar\system\HTTP\IncomingRequest.php on line 587
+[Method: POST, Route: login]
+in SYSTEMPATH\HTTP\RequestTrait.php on line 288.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(587): CodeIgniter\HTTP\Request->fetchGlobal('post', 'display_name', '', null)
+ 2 APPPATH\Controllers\AuthController.php(39): CodeIgniter\HTTP\IncomingRequest->getPost('display_name', '')
+ 3 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->handleLogin()
+ 4 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Sun_Son_Solar\\public\\index.php')
+CRITICAL - 2026-09-29 12:11:28 --> TypeError: CodeIgniter\HTTP\Request::fetchGlobal(): Argument #3 ($filter) must be of type ?int, string given, called in C:\xampp\htdocs\Sun_Son_Solar\system\HTTP\IncomingRequest.php on line 587
+[Method: POST, Route: login]
+in SYSTEMPATH\HTTP\RequestTrait.php on line 288.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(587): CodeIgniter\HTTP\Request->fetchGlobal('post', 'display_name', '', null)
+ 2 APPPATH\Controllers\AuthController.php(39): CodeIgniter\HTTP\IncomingRequest->getPost('display_name', '')
+ 3 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->handleLogin()
+ 4 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Sun_Son_Solar\\public\\index.php')
+CRITICAL - 2026-09-29 12:11:28 --> TypeError: CodeIgniter\HTTP\Request::fetchGlobal(): Argument #3 ($filter) must be of type ?int, string given, called in C:\xampp\htdocs\Sun_Son_Solar\system\HTTP\IncomingRequest.php on line 587
+[Method: POST, Route: login]
+in SYSTEMPATH\HTTP\RequestTrait.php on line 288.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(587): CodeIgniter\HTTP\Request->fetchGlobal('post', 'display_name', '', null)
+ 2 APPPATH\Controllers\AuthController.php(39): CodeIgniter\HTTP\IncomingRequest->getPost('display_name', '')
+ 3 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->handleLogin()
+ 4 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Sun_Son_Solar\\public\\index.php')
+CRITICAL - 2026-09-29 12:11:28 --> TypeError: CodeIgniter\HTTP\Request::fetchGlobal(): Argument #3 ($filter) must be of type ?int, string given, called in C:\xampp\htdocs\Sun_Son_Solar\system\HTTP\IncomingRequest.php on line 587
+[Method: POST, Route: login]
+in SYSTEMPATH\HTTP\RequestTrait.php on line 288.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(587): CodeIgniter\HTTP\Request->fetchGlobal('post', 'display_name', '', null)
+ 2 APPPATH\Controllers\AuthController.php(39): CodeIgniter\HTTP\IncomingRequest->getPost('display_name', '')
+ 3 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->handleLogin()
+ 4 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Sun_Son_Solar\\public\\index.php')
+CRITICAL - 2026-09-29 12:11:29 --> TypeError: CodeIgniter\HTTP\Request::fetchGlobal(): Argument #3 ($filter) must be of type ?int, string given, called in C:\xampp\htdocs\Sun_Son_Solar\system\HTTP\IncomingRequest.php on line 587
+[Method: POST, Route: login]
+in SYSTEMPATH\HTTP\RequestTrait.php on line 288.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(587): CodeIgniter\HTTP\Request->fetchGlobal('post', 'display_name', '', null)
+ 2 APPPATH\Controllers\AuthController.php(39): CodeIgniter\HTTP\IncomingRequest->getPost('display_name', '')
+ 3 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->handleLogin()
+ 4 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Sun_Son_Solar\\public\\index.php')
+CRITICAL - 2026-09-29 12:11:29 --> TypeError: CodeIgniter\HTTP\Request::fetchGlobal(): Argument #3 ($filter) must be of type ?int, string given, called in C:\xampp\htdocs\Sun_Son_Solar\system\HTTP\IncomingRequest.php on line 587
+[Method: POST, Route: login]
+in SYSTEMPATH\HTTP\RequestTrait.php on line 288.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(587): CodeIgniter\HTTP\Request->fetchGlobal('post', 'display_name', '', null)
+ 2 APPPATH\Controllers\AuthController.php(39): CodeIgniter\HTTP\IncomingRequest->getPost('display_name', '')
+ 3 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->handleLogin()
+ 4 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Sun_Son_Solar\\public\\index.php')
+CRITICAL - 2026-09-29 12:11:29 --> TypeError: CodeIgniter\HTTP\Request::fetchGlobal(): Argument #3 ($filter) must be of type ?int, string given, called in C:\xampp\htdocs\Sun_Son_Solar\system\HTTP\IncomingRequest.php on line 587
+[Method: POST, Route: login]
+in SYSTEMPATH\HTTP\RequestTrait.php on line 288.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(587): CodeIgniter\HTTP\Request->fetchGlobal('post', 'display_name', '', null)
+ 2 APPPATH\Controllers\AuthController.php(39): CodeIgniter\HTTP\IncomingRequest->getPost('display_name', '')
+ 3 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->handleLogin()
+ 4 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Sun_Son_Solar\\public\\index.php')
+CRITICAL - 2026-09-29 12:11:29 --> TypeError: CodeIgniter\HTTP\Request::fetchGlobal(): Argument #3 ($filter) must be of type ?int, string given, called in C:\xampp\htdocs\Sun_Son_Solar\system\HTTP\IncomingRequest.php on line 587
+[Method: POST, Route: login]
+in SYSTEMPATH\HTTP\RequestTrait.php on line 288.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(587): CodeIgniter\HTTP\Request->fetchGlobal('post', 'display_name', '', null)
+ 2 APPPATH\Controllers\AuthController.php(39): CodeIgniter\HTTP\IncomingRequest->getPost('display_name', '')
+ 3 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->handleLogin()
+ 4 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Sun_Son_Solar\\public\\index.php')
+CRITICAL - 2026-09-29 12:11:29 --> TypeError: CodeIgniter\HTTP\Request::fetchGlobal(): Argument #3 ($filter) must be of type ?int, string given, called in C:\xampp\htdocs\Sun_Son_Solar\system\HTTP\IncomingRequest.php on line 587
+[Method: POST, Route: login]
+in SYSTEMPATH\HTTP\RequestTrait.php on line 288.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(587): CodeIgniter\HTTP\Request->fetchGlobal('post', 'display_name', '', null)
+ 2 APPPATH\Controllers\AuthController.php(39): CodeIgniter\HTTP\IncomingRequest->getPost('display_name', '')
+ 3 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->handleLogin()
+ 4 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Sun_Son_Solar\\public\\index.php')
+CRITICAL - 2026-09-29 12:11:30 --> TypeError: CodeIgniter\HTTP\Request::fetchGlobal(): Argument #3 ($filter) must be of type ?int, string given, called in C:\xampp\htdocs\Sun_Son_Solar\system\HTTP\IncomingRequest.php on line 587
+[Method: POST, Route: login]
+in SYSTEMPATH\HTTP\RequestTrait.php on line 288.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(587): CodeIgniter\HTTP\Request->fetchGlobal('post', 'display_name', '', null)
+ 2 APPPATH\Controllers\AuthController.php(39): CodeIgniter\HTTP\IncomingRequest->getPost('display_name', '')
+ 3 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->handleLogin()
+ 4 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Sun_Son_Solar\\public\\index.php')
+CRITICAL - 2026-09-29 12:11:30 --> TypeError: CodeIgniter\HTTP\Request::fetchGlobal(): Argument #3 ($filter) must be of type ?int, string given, called in C:\xampp\htdocs\Sun_Son_Solar\system\HTTP\IncomingRequest.php on line 587
+[Method: POST, Route: login]
+in SYSTEMPATH\HTTP\RequestTrait.php on line 288.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(587): CodeIgniter\HTTP\Request->fetchGlobal('post', 'display_name', '', null)
+ 2 APPPATH\Controllers\AuthController.php(39): CodeIgniter\HTTP\IncomingRequest->getPost('display_name', '')
+ 3 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->handleLogin()
+ 4 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Sun_Son_Solar\\public\\index.php')
