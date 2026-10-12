@@ -74,11 +74,11 @@ if (registrationForm) {
 
         try {
             const endpoint = registrationForm.dataset.endpoint || '/register';
-            await submitForm(registrationForm, endpoint);
+            const result = await submitForm(registrationForm, endpoint);
             setMessage(registrationForm, 'Account created. Redirecting...', 'success');
             registrationForm.reset();
             window.setTimeout(() => {
-                window.location.href = '/login';
+                window.location.href = result.redirect;
             }, 900);
         } catch (error) {
             setMessage(registrationForm, error.message, 'error');
