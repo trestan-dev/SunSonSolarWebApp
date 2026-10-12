@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use App\Models\UserModel;
+
 class AuthController extends BaseController
 {
     public function employeeRegistration(): string
@@ -36,12 +38,7 @@ class AuthController extends BaseController
                 ->setStatusCode(422);
         }
 
-        $db = db_connect();
-        $user = $db->table('users')
-            ->where('email', $login)
-            ->orWhere('username', $login)
-            ->get()
-            ->getRowArray();
+        $user = (new UserModel())->findByLogin($login);
 
         $storedPassword = (string) ($user['password_hash'] ?? $user['password'] ?? '');
         $isValidPassword = $storedPassword !== '' && (
@@ -81,12 +78,13 @@ class AuthController extends BaseController
                 ->setStatusCode(405);
         }
 
-        $accountType = trim((string) $this->request->getPost('account_type', 'customer'));
+        $accountType = trim((string) ($this->request->getPost('account_type') ?? 'customer'));
         $fields = ['first_name', 'last_name', 'middle_name', 'birthdate', 'gender', 'email', 'phone_number', 'address', 'username', 'password'];
         $values = [];
 
         foreach ($fields as $field) {
-            $values[$field] = trim((string) $this->request->getPost($field, ''));
+            $rawValue = $this->request->getPost($field);
+            $values[$field] = trim((string) ($rawValue ?? ''));
             if ($values[$field] === '') {
                 return $this->response
                     ->setJSON(['message' => 'Please complete all fields.'])
@@ -111,8 +109,8 @@ class AuthController extends BaseController
 
         if ($accountType === 'employee') {
             $inviteCode = trim((string) getenv('SUNSON_EMPLOYEE_INVITE_CODE'));
-            $submittedCode = trim((string) $this->request->getPost('employee_code', ''));
-            $department = trim((string) $this->request->getPost('department', ''));
+            $submittedCode = trim((string) ($this->request->getPost('employee_code') ?? ''));
+            $department = trim((string) ($this->request->getPost('department') ?? ''));
 
             if ($inviteCode === '' || !hash_equals($inviteCode, $submittedCode)) {
                 return $this->response
@@ -133,8 +131,7 @@ class AuthController extends BaseController
                 ->setStatusCode(422);
         }
 
-        $db = db_connect();
-        $inserted = $db->table('users')->insert([
+        $userId = (new UserModel())->createUser([
             'first_name' => $values['first_name'],
             'last_name' => $values['last_name'],
             'middle_name' => $values['middle_name'],
@@ -149,14 +146,14 @@ class AuthController extends BaseController
             'department' => $department,
         ]);
 
-        if (!$inserted) {
+        if ($userId === false) {
             return $this->response
                 ->setJSON(['message' => 'Unable to create the account.'])
                 ->setStatusCode(500);
         }
 
         session()->set([
-            'user_id' => $db->insertID(),
+            'user_id' => $userId,
             'user_name' => trim($values['first_name'] . ' ' . $values['last_name']),
             'user_role' => $role,
         ]);
