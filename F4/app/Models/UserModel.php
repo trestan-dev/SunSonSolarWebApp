@@ -22,6 +22,9 @@ class UserModel extends Model
         'password_hash',
         'role',
         'department',
+        'job_title',
+        'is_active',
+        'must_change_password',
     ];
 
     public function findByLogin(string $login): ?array

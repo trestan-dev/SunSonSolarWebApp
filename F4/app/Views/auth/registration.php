@@ -16,6 +16,7 @@
             <h1>Welcome to SunSonSolar</h1>
             <p>Please fill out the form below to create an account.</p>
             <form id="registration-form" data-endpoint="<?= site_url('register') ?>">
+                <?= csrf_field() ?>
                 <div class="form-fields">
                     <input type="text" placeholder="First Name" name="first_name" required>
                     <input type="text" placeholder="Last Name" name="last_name" required>

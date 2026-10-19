@@ -11,15 +11,11 @@
 <body>
     <div class="auth-container">
         <div class="auth-form login-form">
-<<<<<<< HEAD:F4/login.html
-            <img class="site-logo" src="assets/logo-sss.png" alt="SunSonSolar logo">
-            <h1>Welcome to SunSonSolarrrrr</h1>
-=======
             <img class="site-logo" src="<?= base_url('assets/logo-sss.png') ?>" alt="SunSonSolar logo">
             <h1>Welcome to SunSonSolar</h1>
->>>>>>> frontend:F4/app/Views/auth/login.php
             <p>Please enter your credentials to log in.</p>
             <form id="login-form" data-endpoint="<?= site_url('login') ?>">
+                <?= csrf_field() ?>
                 <div class="form-fields">
                     <input type="text" placeholder="Email or username" name="login" autocomplete="username" required>
                     <div class="password-field">

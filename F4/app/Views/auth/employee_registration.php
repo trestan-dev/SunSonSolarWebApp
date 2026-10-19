@@ -1,56 +1,20 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employee Registration</title>
-    <link rel="stylesheet" href="<?= base_url('assets/css/sss-auth.css') ?>">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <script type="module" src="<?= base_url('assets/js/sss-auth.js') ?>"></script>
+    <title>Employee accounts | Sun Son Solar</title>
+    <link rel="stylesheet" href="<?= base_url('assets/css/portal.css') ?>">
 </head>
-
-<body>
-    <div class="auth-container">
-        <div class="auth-form registration-form">
-            <img class="site-logo" src="<?= base_url('assets/logo-sss.png') ?>" alt="SunSonSolar logo">
-            <h1>Employee Registration</h1>
-            <p>Use the invite code provided by a SunSonSolar administrator.</p>
-            <form id="registration-form" data-endpoint="<?= site_url('register') ?>">
-                <input type="hidden" name="account_type" value="employee">
-                <div class="form-fields">
-                    <input type="text" placeholder="First Name" name="first_name" required>
-                    <input type="text" placeholder="Last Name" name="last_name" required>
-                    <input type="text" placeholder="Middle Name" name="middle_name" required>
-                    <label for="birthdate" style="font-weight: bold; margin: 0 0 6px 0;">Birthdate</label>
-                    <input type="date" id="birthdate" name="birthdate" required>
-                    <div class="gender-group">
-                        <label id="gender-label">Gender</label>
-                        <div class="gender-options">
-                            <label class="gender-option" for="male"><input type="radio" id="male" name="gender" value="male" required><span>Male</span></label>
-                            <label class="gender-option" for="female"><input type="radio" id="female" name="gender" value="female" required><span>Female</span></label>
-                        </div>
-                    </div>
-                    <input type="email" placeholder="Email" name="email" required>
-                    <input type="tel" placeholder="Phone Number" name="phone_number" autocomplete="tel" required>
-                    <input type="text" placeholder="Address" name="address" required>
-                    <input type="text" placeholder="Department (e.g. Technician)" name="department" required>
-                    <input type="text" placeholder="Username" name="username" required>
-                    <div class="password-field">
-                        <input type="password" placeholder="Password" name="password" required>
-                        <button class="password-toggle" type="button" aria-label="Show password" aria-pressed="false"><i class="fa-solid fa-eye" aria-hidden="true"></i></button>
-                    </div>
-                    <div class="password-field">
-                        <input type="password" placeholder="Employee Invite Code" name="employee_code" required>
-                        <button class="password-toggle" type="button" aria-label="Show employee invite code" aria-pressed="false"><i class="fa-solid fa-eye" aria-hidden="true"></i></button>
-                    </div>
-                </div>
-                <button type="submit">Register as Employee</button>
-                <p class="form-message" role="status" aria-live="polite"></p>
-                <p>Customer? <a href="<?= site_url('register') ?>">Create a customer account</a></p>
-            </form>
-        </div>
-    </div>
+<body class="portal-page">
+    <main class="auth-container" style="min-height:100vh;display:grid;place-items:center;padding:24px">
+        <section class="portal-panel" style="width:min(100%,480px);padding:28px;text-align:center">
+            <a class="brand" href="<?= site_url('/') ?>"><img src="<?= base_url('assets/logo-sss.png') ?>" alt=""><span>Sun Son <b>Solar</b></span></a>
+            <h1 style="margin-top:28px;font-size:28px">Employee accounts are created by HR or an administrator.</h1>
+            <p style="margin:14px 0 22px;color:var(--muted);font-size:13px;line-height:1.6">Ask your HR team or administrator for your username and temporary password. You’ll be asked to change the password at your first sign-in.</p>
+            <a class="button button-dark" href="<?= site_url('login') ?>">Go to sign in</a>
+        </section>
+    </main>
 </body>
-
 </html>

@@ -6,9 +6,9 @@ use App\Models\UserModel;
 
 class AuthController extends BaseController
 {
-    public function employeeRegistration(): string
+    public function employeeRegistration()
     {
-        return view('auth/employee_registration');
+        return redirect()->to('login');
     }
 
     public function loginPage(): string
@@ -40,13 +40,17 @@ class AuthController extends BaseController
 
         $user = (new UserModel())->findByLogin($login);
 
-        $storedPassword = (string) ($user['password_hash'] ?? $user['password'] ?? '');
-        $isValidPassword = $storedPassword !== '' && (
-            password_verify($password, $storedPassword)
-            || hash_equals($storedPassword, $password)
-        );
+        $storedPassword = (string) ($user['password_hash'] ?? '');
+        $isValidPassword = $storedPassword !== '' && password_verify($password, $storedPassword);
+        if ($user && !$isValidPassword && $storedPassword !== ''
+            && password_get_info($storedPassword)['algoName'] === 'unknown'
+            && hash_equals($storedPassword, $password)) {
+            $storedPassword = password_hash($password, PASSWORD_DEFAULT);
+            (new UserModel())->update($user['id'], ['password_hash' => $storedPassword]);
+            $isValidPassword = true;
+        }
 
-        if (!$user || !$isValidPassword) {
+        if (!$user || !$isValidPassword || !(bool) ($user['is_active'] ?? true)) {
             return $this->response
                 ->setJSON(['message' => 'Email, username, or password is incorrect.'])
                 ->setStatusCode(401);
@@ -62,6 +66,8 @@ class AuthController extends BaseController
             'user_id' => $user['id'],
             'user_name' => $fullName,
             'user_role' => $user['role'] ?? 'customer',
+            'user_department' => $user['department'] ?? null,
+            'must_change_password' => (bool) ($user['must_change_password'] ?? false),
         ]);
 
         return $this->response->setJSON([
@@ -79,12 +85,20 @@ class AuthController extends BaseController
         }
 
         $accountType = trim((string) ($this->request->getPost('account_type') ?? 'customer'));
+        if ($accountType !== 'customer') {
+            return $this->response
+                ->setJSON(['message' => 'Only customer accounts can register here.'])
+                ->setStatusCode(403);
+        }
+
         $fields = ['first_name', 'last_name', 'middle_name', 'birthdate', 'gender', 'email', 'phone_number', 'address', 'username', 'password'];
         $values = [];
 
         foreach ($fields as $field) {
             $rawValue = $this->request->getPost($field);
-            $values[$field] = trim((string) ($rawValue ?? ''));
+            $values[$field] = $field === 'password'
+                ? (string) ($rawValue ?? '')
+                : trim((string) ($rawValue ?? ''));
             if ($values[$field] === '') {
                 return $this->response
                     ->setJSON(['message' => 'Please complete all fields.'])
@@ -104,33 +118,6 @@ class AuthController extends BaseController
                 ->setStatusCode(422);
         }
 
-        $role = 'customer';
-        $department = null;
-
-        if ($accountType === 'employee') {
-            $inviteCode = trim((string) getenv('SUNSON_EMPLOYEE_INVITE_CODE'));
-            $submittedCode = trim((string) ($this->request->getPost('employee_code') ?? ''));
-            $department = trim((string) ($this->request->getPost('department') ?? ''));
-
-            if ($inviteCode === '' || !hash_equals($inviteCode, $submittedCode)) {
-                return $this->response
-                    ->setJSON(['message' => 'Employee registration requires a valid invite code.'])
-                    ->setStatusCode(403);
-            }
-
-            if ($department === '') {
-                return $this->response
-                    ->setJSON(['message' => 'Please enter your department.'])
-                    ->setStatusCode(422);
-            }
-
-            $role = 'employee';
-        } elseif ($accountType !== 'customer') {
-            return $this->response
-                ->setJSON(['message' => 'Invalid account type.'])
-                ->setStatusCode(422);
-        }
-
         $userId = (new UserModel())->createUser([
             'first_name' => $values['first_name'],
             'last_name' => $values['last_name'],
@@ -142,8 +129,10 @@ class AuthController extends BaseController
             'address' => $values['address'],
             'username' => $values['username'],
             'password_hash' => password_hash($values['password'], PASSWORD_DEFAULT),
-            'role' => $role,
-            'department' => $department,
+            'role' => 'customer',
+            'department' => null,
+            'is_active' => true,
+            'must_change_password' => false,
         ]);
 
         if ($userId === false) {
@@ -152,15 +141,17 @@ class AuthController extends BaseController
                 ->setStatusCode(500);
         }
 
+        session()->regenerate();
         session()->set([
             'user_id' => $userId,
             'user_name' => trim($values['first_name'] . ' ' . $values['last_name']),
-            'user_role' => $role,
+            'user_role' => 'customer',
+            'must_change_password' => false,
         ]);
 
         return $this->response->setJSON([
             'message' => 'Account created.',
-            'redirect' => site_url('login'),
+            'redirect' => site_url('home'),
         ]);
     }
 
