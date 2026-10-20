@@ -35,7 +35,13 @@ async function submitForm(form, endpoint) {
         headers: { Accept: 'application/json' }
     });
 
-    const result = await response.json();
+    const responseBody = await response.text();
+    let result;
+    try {
+        result = JSON.parse(responseBody);
+    } catch {
+        throw new Error('The server returned an unexpected page. Please refresh and try again; if it continues, contact the administrator.');
+    }
     if (!response.ok) {
         throw new Error(result.message || 'Something went wrong.');
     }

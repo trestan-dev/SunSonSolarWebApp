@@ -204,6 +204,25 @@ button:disabled {
     color: #18794e;
 }
 
+.back-home {
+    margin: 28px 0 0;
+}
+
+.back-home a {
+    color: #176b57;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    text-underline-offset: 4px;
+    transition: color 150ms ease, text-decoration-color 150ms ease;
+}
+
+.back-home a:hover,
+.back-home a:focus-visible {
+    color: #104b3d;
+    text-decoration: underline;
+}
+
 .button-link {
     display: block;
     width: 100%;

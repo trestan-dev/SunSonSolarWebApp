@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="<?= base_url('assets/css/sss-auth.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/sss-auth.css?v=20261020-back-home') ?>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <script type="module" src="<?= base_url('assets/js/sss-auth.js') ?>"></script>
+    <script type="module" src="<?= base_url('assets/js/sss-auth.js?v=20261020-login-errors') ?>"></script>
 </head>
 <body>
     <div class="auth-container">
@@ -27,6 +27,7 @@
                 <p class="form-message" role="status" aria-live="polite"></p>
                 <p>Don't have an account? <a href="<?= site_url('register') ?>">Register</a></p>
             </form>
+            <p class="back-home"><a href="<?= site_url('/') ?>">Back to landing page</a></p>
         </div>
     </div>
 </body>

@@ -11,7 +11,7 @@ class Home extends BaseController
             return view('landing', [
                 'services' => $db->table('services')->where('is_active', 1)->get()->getResultArray(),
                 'products' => $db->table('products')->where('is_active', 1)->get()->getResultArray(),
-                'stories' => $db->table('customer_stories')->where('is_active', 1)->orderBy('id', 'DESC')->limit(3)->get()->getResultArray(),
+                'stories' => $db->table('customer_stories')->where('is_active', 1)->where('moderation_status', 'approved')->orderBy('id', 'DESC')->limit(3)->get()->getResultArray(),
                 'news' => $db->table('notifications')->where('audience', 'public')->orderBy('id', 'DESC')->limit(3)->get()->getResultArray(),
             ]);
         }
@@ -82,6 +82,7 @@ class Home extends BaseController
                     $data['product_category'] = '';
                 }
                 $data['products'] = $productQuery->orderBy('category')->orderBy('name')->get()->getResultArray();
+                $data['product_orders'] = $this->productOrderRows($db, $userId);
             }
             $data['bookings'] = $db->table('bookings b')
                 ->select('b.*, s.name AS service_name, t.first_name AS technician_first, t.last_name AS technician_last')
@@ -91,6 +92,18 @@ class Home extends BaseController
                 ->orderBy('b.scheduled_at', 'DESC')
                 ->get()->getResultArray();
             $data['payments'] = $db->table('payments')->where('customer_id', $userId)->orderBy('id', 'DESC')->get()->getResultArray();
+            $data['customer_stories'] = $db->table('customer_stories')->where('customer_id', $userId)->orderBy('id', 'DESC')->get()->getResultArray();
+            $submittedBookingIds = array_column($data['customer_stories'], 'booking_id');
+            $feedbackQuery = $db->table('bookings b')
+                ->select('b.id, b.scheduled_at, s.name AS service_name')
+                ->join('services s', 's.id = b.service_id', 'left')
+                ->where('b.customer_id', $userId)
+                ->where('b.status', 'completed')
+                ->orderBy('b.scheduled_at', 'DESC');
+            if ($submittedBookingIds !== []) {
+                $feedbackQuery->whereNotIn('b.id', $submittedBookingIds);
+            }
+            $data['feedback_bookings'] = $feedbackQuery->get()->getResultArray();
             $data['tickets'] = $db->table('support_tickets')->where('customer_id', $userId)->orderBy('id', 'DESC')->get()->getResultArray();
             $data['preferences'] = $db->table('customer_preferences')->where('user_id', $userId)->get()->getRowArray() ?? [];
             $notificationQuery = $db->table('notifications')
@@ -108,7 +121,7 @@ class Home extends BaseController
         }
 
         if ($role === 'admin') {
-            $adminSections = ['overview', 'schedule', 'users', 'services', 'reports', 'payments', 'attendance', 'stories', 'announcements', 'support', 'field-reports'];
+            $adminSections = ['overview', 'schedule', 'users', 'services', 'reports', 'payments', 'orders', 'attendance', 'stories', 'announcements', 'support', 'field-reports'];
             if ($portalSection === null || !in_array($portalSection, $adminSections, true)) {
                 return redirect()->to('admin/overview');
             }
@@ -124,15 +137,23 @@ class Home extends BaseController
             $data['revenue'] = $db->table('payments')->selectSum('amount')->where('status', 'paid')->get()->getRowArray()['amount'] ?? 0;
             $data['service_usage'] = $db->query('SELECT s.name, COUNT(b.id) AS total FROM services s LEFT JOIN bookings b ON b.service_id = s.id GROUP BY s.id, s.name ORDER BY total DESC, s.name')->getResultArray();
             $data['payments'] = $db->table('payments p')->select('p.*, u.first_name, u.last_name, b.scheduled_at, s.name AS service_name')->join('users u', 'u.id = p.customer_id')->join('bookings b', 'b.id = p.booking_id')->join('services s', 's.id = b.service_id', 'left')->orderBy('p.id', 'DESC')->get()->getResultArray();
+            $data['product_orders'] = $portalSection === 'orders' ? $this->productOrderRows($db) : [];
+            $data['delivery_staff'] = $portalSection === 'orders'
+                ? $db->table('users')->where('role', 'employee')->where('department', 'Dispatch')->where('is_active', 1)->orderBy('first_name')->get()->getResultArray()
+                : [];
             $data['open_tickets'] = $db->table('support_tickets')->where('status', 'open')->countAllResults();
             $data['announcements'] = $db->table('notifications')->whereIn('audience', ['employees', 'all'])->orderBy('id', 'DESC')->limit(8)->get()->getResultArray();
-            $data['stories'] = $db->table('customer_stories')->orderBy('id', 'DESC')->get()->getResultArray();
+            $data['stories'] = $db->table('customer_stories st')
+                ->select('st.*, u.first_name AS submitter_first, u.last_name AS submitter_last, u.email AS submitter_email')
+                ->join('users u', 'u.id = st.customer_id', 'left')
+                ->orderBy('st.id', 'DESC')->get()->getResultArray();
 
             return view('dashboards/admin', $data);
         }
 
         $department = strtolower((string) session()->get('user_department'));
         $isFieldTechnician = in_array(strtolower((string) ($user['job_title'] ?? '')), ['technician', 'head technician'], true);
+        $isDispatch = $department === 'dispatch';
         if ($portalSection === null) {
             return redirect()->to('employee/overview');
         }
@@ -140,8 +161,18 @@ class Home extends BaseController
         if ($department === 'hr') {
             $employeeSections[] = 'employees';
         }
-        if ($department === 'dispatch') {
+        if ($department === 'sales') {
+            $employeeSections[] = 'support';
+        }
+        if ($department === 'accounting') {
+            $employeeSections[] = 'payments';
+        }
+        if ($department === 'customer service') {
+            $employeeSections[] = 'support';
+        }
+        if ($isDispatch) {
             $employeeSections[] = 'schedule';
+            $employeeSections[] = 'deliveries';
         }
         if ($isFieldTechnician) {
             $employeeSections = array_merge($employeeSections, ['jobs', 'checkins', 'reports']);
@@ -150,14 +181,25 @@ class Home extends BaseController
             return redirect()->to('employee/overview');
         }
         $data['employee_section'] = $portalSection;
-        $data['bookings'] = $department === 'dispatch'
+        $data['bookings'] = $isDispatch
             ? $this->bookingRows($db, null)
             : ($isFieldTechnician ? $this->bookingRows($db, $userId, false) : []);
-        if ($department === 'dispatch') {
+        if ($isDispatch) {
             $data['technicians'] = $db->table('users')->where('role', 'employee')->whereIn('job_title', ['Technician', 'Head Technician'])->where('is_active', 1)->get()->getResultArray();
+            $data['product_orders'] = $this->productOrderRows($db, null, true, $userId);
         }
         if ($department === 'hr') {
             $data['employees'] = $db->table('users')->select('id, first_name, last_name, middle_name, birthdate, gender, email, phone_number, address, username, department, job_title, is_active')->where('role', 'employee')->orderBy('id', 'DESC')->get()->getResultArray();
+        }
+        if ($department === 'accounting') {
+            $data['payments'] = $db->table('payments p')->select('p.*, u.first_name, u.last_name, b.scheduled_at, s.name AS service_name')->join('users u', 'u.id = p.customer_id')->join('bookings b', 'b.id = p.booking_id')->join('services s', 's.id = b.service_id', 'left')->orderBy('p.id', 'DESC')->get()->getResultArray();
+            $data['payment_bookings'] = $db->table('bookings b')->select('b.id, c.first_name AS customer_first, c.last_name AS customer_last, s.name AS service_name')->join('users c', 'c.id = b.customer_id')->join('services s', 's.id = b.service_id', 'left')->orderBy('b.id', 'DESC')->get()->getResultArray();
+        }
+        if ($department === 'customer service') {
+            $data['tickets'] = $db->table('support_tickets t')->select('t.*, u.first_name, u.last_name, u.email')->join('users u', 'u.id = t.customer_id')->orderBy('t.id', 'DESC')->get()->getResultArray();
+        }
+        if ($department === 'sales') {
+            $data['tickets'] = $db->table('support_tickets t')->select('t.*, u.first_name, u.last_name, u.email')->join('users u', 'u.id = t.customer_id')->like('t.subject', 'Product inquiry')->orderBy('t.id', 'DESC')->get()->getResultArray();
         }
         $data['announcements'] = $db->table('notifications')
             ->groupStart()->where('user_id', $userId)->orGroupStart()->where('audience', 'employees')->orWhere('audience', 'all')->groupEnd()->groupEnd()
@@ -183,5 +225,23 @@ class Home extends BaseController
         }
 
         return $query->orderBy('b.scheduled_at', 'ASC')->get()->getResultArray();
+    }
+
+    private function productOrderRows($db, ?int $customerId = null, bool $includeUnassigned = false, ?int $deliveryStaffId = null): array
+    {
+        $query = $db->table('orders o')
+            ->select("o.*, c.first_name AS customer_first, c.last_name AS customer_last, c.email AS customer_email, d.first_name AS delivery_first, d.last_name AS delivery_last, GROUP_CONCAT(CONCAT(oi.quantity, ' x ', oi.product_name) ORDER BY oi.id SEPARATOR ', ') AS items")
+            ->join('users c', 'c.id = o.customer_id')
+            ->join('users d', 'd.id = o.delivery_staff_id', 'left')
+            ->join('order_items oi', 'oi.order_id = o.id', 'left');
+
+        if ($customerId !== null) {
+            $query->where('o.customer_id', $customerId);
+        } elseif ($includeUnassigned) {
+            $query->whereIn('o.status', ['confirmed', 'preparing', 'out_for_delivery'])
+                ->groupStart()->where('o.delivery_staff_id', null)->orWhere('o.delivery_staff_id', $deliveryStaffId ?? session()->get('user_id'))->groupEnd();
+        }
+
+        return $query->groupBy('o.id')->orderBy('o.created_at', 'DESC')->get()->getResultArray();
     }
 }

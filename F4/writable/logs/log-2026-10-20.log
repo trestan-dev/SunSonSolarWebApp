@@ -1,0 +1,911 @@
+ERROR - 2026-10-20 05:25:01 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'sunsonsolar' in C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'sunsonsolar', 3306, '', 0)
+#1 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\SunSonSolarWebApp\F4\app\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(974): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\SunSonSolarWebApp\F4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'sunsonsolar' in C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\SunSonSolarWebApp\F4\app\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(974): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\SunSonSolarWebApp\F4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2026-10-20 05:25:01 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'sunsonsolar'
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `services`
+WHERE `is_active` = :is_active:', [...], false)
+ 3 APPPATH\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-10-20 05:25:05 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'sunsonsolar' in C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'sunsonsolar', 3306, '', 0)
+#1 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\SunSonSolarWebApp\F4\app\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(974): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\SunSonSolarWebApp\F4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'sunsonsolar' in C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\SunSonSolarWebApp\F4\app\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(974): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\SunSonSolarWebApp\F4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2026-10-20 05:25:05 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'sunsonsolar'
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `services`
+WHERE `is_active` = :is_active:', [...], false)
+ 3 APPPATH\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-10-20 05:25:05 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'sunsonsolar' in C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'sunsonsolar', 3306, '', 0)
+#1 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\SunSonSolarWebApp\F4\app\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(974): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\SunSonSolarWebApp\F4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'sunsonsolar' in C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\SunSonSolarWebApp\F4\app\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(974): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\SunSonSolarWebApp\F4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2026-10-20 05:25:05 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'sunsonsolar'
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `services`
+WHERE `is_active` = :is_active:', [...], false)
+ 3 APPPATH\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-10-20 05:25:06 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'sunsonsolar' in C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'sunsonsolar', 3306, '', 0)
+#1 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\SunSonSolarWebApp\F4\app\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(974): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\SunSonSolarWebApp\F4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'sunsonsolar' in C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\SunSonSolarWebApp\F4\app\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(974): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\SunSonSolarWebApp\F4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2026-10-20 05:25:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'sunsonsolar'
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `services`
+WHERE `is_active` = :is_active:', [...], false)
+ 3 APPPATH\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-10-20 05:25:06 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'sunsonsolar' in C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'sunsonsolar', 3306, '', 0)
+#1 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\SunSonSolarWebApp\F4\app\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(974): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\SunSonSolarWebApp\F4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'sunsonsolar' in C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\SunSonSolarWebApp\F4\app\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(974): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\SunSonSolarWebApp\F4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2026-10-20 05:25:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'sunsonsolar'
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `services`
+WHERE `is_active` = :is_active:', [...], false)
+ 3 APPPATH\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-10-20 05:25:06 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'sunsonsolar' in C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'sunsonsolar', 3306, '', 0)
+#1 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\SunSonSolarWebApp\F4\app\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(974): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\SunSonSolarWebApp\F4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'sunsonsolar' in C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\SunSonSolarWebApp\F4\app\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(974): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\SunSonSolarWebApp\F4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2026-10-20 05:25:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'sunsonsolar'
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `services`
+WHERE `is_active` = :is_active:', [...], false)
+ 3 APPPATH\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-10-20 05:25:18 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'sunsonsolar' in C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'sunsonsolar', 3306, '', 0)
+#1 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\SunSonSolarWebApp\F4\app\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(974): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\SunSonSolarWebApp\F4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'sunsonsolar' in C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\SunSonSolarWebApp\F4\app\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(974): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\SunSonSolarWebApp\F4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2026-10-20 05:25:18 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'sunsonsolar'
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `services`
+WHERE `is_active` = :is_active:', [...], false)
+ 3 APPPATH\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-10-20 05:25:19 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'sunsonsolar' in C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'sunsonsolar', 3306, '', 0)
+#1 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\SunSonSolarWebApp\F4\app\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(974): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\SunSonSolarWebApp\F4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'sunsonsolar' in C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\SunSonSolarWebApp\F4\app\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(974): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\SunSonSolarWebApp\F4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2026-10-20 05:25:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'sunsonsolar'
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `services`
+WHERE `is_active` = :is_active:', [...], false)
+ 3 APPPATH\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-10-20 05:25:19 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'sunsonsolar' in C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'sunsonsolar', 3306, '', 0)
+#1 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\SunSonSolarWebApp\F4\app\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(974): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\SunSonSolarWebApp\F4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'sunsonsolar' in C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\SunSonSolarWebApp\F4\app\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(974): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\SunSonSolarWebApp\F4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2026-10-20 05:25:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'sunsonsolar'
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `services`
+WHERE `is_active` = :is_active:', [...], false)
+ 3 APPPATH\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-10-20 05:25:20 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'sunsonsolar' in C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'sunsonsolar', 3306, '', 0)
+#1 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\SunSonSolarWebApp\F4\app\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(974): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\SunSonSolarWebApp\F4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'sunsonsolar' in C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\SunSonSolarWebApp\F4\app\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(974): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\SunSonSolarWebApp\F4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2026-10-20 05:25:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'sunsonsolar'
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `services`
+WHERE `is_active` = :is_active:', [...], false)
+ 3 APPPATH\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-10-20 05:25:20 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'sunsonsolar' in C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'sunsonsolar', 3306, '', 0)
+#1 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\SunSonSolarWebApp\F4\app\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(974): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\SunSonSolarWebApp\F4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'sunsonsolar' in C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\SunSonSolarWebApp\F4\app\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(974): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\SunSonSolarWebApp\F4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2026-10-20 05:25:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'sunsonsolar'
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `services`
+WHERE `is_active` = :is_active:', [...], false)
+ 3 APPPATH\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-10-20 05:25:20 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'sunsonsolar' in C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'sunsonsolar', 3306, '', 0)
+#1 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\SunSonSolarWebApp\F4\app\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(974): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\SunSonSolarWebApp\F4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'sunsonsolar' in C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\SunSonSolarWebApp\F4\app\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(974): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\SunSonSolarWebApp\F4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2026-10-20 05:25:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'sunsonsolar'
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `services`
+WHERE `is_active` = :is_active:', [...], false)
+ 3 APPPATH\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-10-20 05:25:20 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'sunsonsolar' in C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'sunsonsolar', 3306, '', 0)
+#1 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\SunSonSolarWebApp\F4\app\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(974): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\SunSonSolarWebApp\F4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'sunsonsolar' in C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\SunSonSolarWebApp\F4\app\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(974): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\SunSonSolarWebApp\F4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2026-10-20 05:25:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'sunsonsolar'
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `services`
+WHERE `is_active` = :is_active:', [...], false)
+ 3 APPPATH\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-10-20 05:25:20 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'sunsonsolar' in C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'sunsonsolar', 3306, '', 0)
+#1 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\SunSonSolarWebApp\F4\app\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(974): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\SunSonSolarWebApp\F4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'sunsonsolar' in C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\SunSonSolarWebApp\F4\app\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(974): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\SunSonSolarWebApp\F4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2026-10-20 05:25:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'sunsonsolar'
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `services`
+WHERE `is_active` = :is_active:', [...], false)
+ 3 APPPATH\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-10-20 05:25:20 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'sunsonsolar' in C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'sunsonsolar', 3306, '', 0)
+#1 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\SunSonSolarWebApp\F4\app\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(974): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\SunSonSolarWebApp\F4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'sunsonsolar' in C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\SunSonSolarWebApp\F4\app\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(974): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\SunSonSolarWebApp\F4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2026-10-20 05:25:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'sunsonsolar'
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `services`
+WHERE `is_active` = :is_active:', [...], false)
+ 3 APPPATH\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-10-20 05:25:21 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'sunsonsolar' in C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'sunsonsolar', 3306, '', 0)
+#1 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\SunSonSolarWebApp\F4\app\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(974): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\SunSonSolarWebApp\F4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'sunsonsolar' in C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\SunSonSolarWebApp\F4\app\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(974): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\SunSonSolarWebApp\F4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2026-10-20 05:25:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'sunsonsolar'
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `services`
+WHERE `is_active` = :is_active:', [...], false)
+ 3 APPPATH\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-10-20 05:25:45 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'sunsonsolar' in C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'sunsonsolar', 3306, '', 0)
+#1 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\SunSonSolarWebApp\F4\app\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(974): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\SunSonSolarWebApp\F4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'sunsonsolar' in C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\SunSonSolarWebApp\F4\app\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(974): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\SunSonSolarWebApp\F4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2026-10-20 05:25:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'sunsonsolar'
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `services`
+WHERE `is_active` = :is_active:', [...], false)
+ 3 APPPATH\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-10-20 05:26:51 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'sunsonsolar' in C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'sunsonsolar', 3306, '', 0)
+#1 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\SunSonSolarWebApp\F4\app\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(974): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\SunSonSolarWebApp\F4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'sunsonsolar' in C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\SunSonSolarWebApp\F4\app\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(974): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\SunSonSolarWebApp\F4\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\SunSonSolarWebApp\F4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2026-10-20 05:26:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'sunsonsolar'
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `services`
+WHERE `is_active` = :is_active:', [...], false)
+ 3 APPPATH\Controllers\Home.php(12): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-10-20 06:26:57 --> Table 'sunsonsolar.orders' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `o`.*, `c`.`first_name` AS `customer_first`, `c`.`last_name` AS `customer_last`, `c`.`email` AS `customer_email`, `d`.`first_name` AS `delivery_first`, `d`.`last_name` AS `delivery_last`, GROUP_CONCAT(CONCAT(oi.quantity, \' x \', oi.product_name) ORDER BY oi.id SEPARATOR \', \') AS items
+FROM `orders` `o`
+JOIN `users` `c` ON `c`.`id` = `o`.`customer_id`
+LEFT JOIN `users` `d` ON `d`.`id` = `o`.`delivery_staff_id`
+LEFT JOIN `order_items` `oi` ON `oi`.`order_id` = `o`.`id`
+WHERE `o`.`customer_id` = 4
+GROUP BY `o`.`id`
+ORDER BY `o`.`created_at` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `o`.*, `c`.`first_name` AS `customer_first`, `c`.`last_name` AS `customer_last`, `c`.`email` AS `customer_email`, `d`.`first_name` AS `delivery_first`, `d`.`last_name` AS `delivery_last`, GROUP_CONCAT(CONCAT(oi.quantity, \' x \', oi.product_name) ORDER BY oi.id SEPARATOR \', \') AS items
+FROM `orders` `o`
+JOIN `users` `c` ON `c`.`id` = `o`.`customer_id`
+LEFT JOIN `users` `d` ON `d`.`id` = `o`.`delivery_staff_id`
+LEFT JOIN `order_items` `oi` ON `oi`.`order_id` = `o`.`id`
+WHERE `o`.`customer_id` = 4
+GROUP BY `o`.`id`
+ORDER BY `o`.`created_at` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `o`.*, `c`.`first_name` AS `customer_first`, `c`.`last_name` AS `customer_last`, `c`.`email` AS `customer_email`, `d`.`first_name` AS `delivery_first`, `d`.`last_name` AS `delivery_last`, GROUP_CONCAT(CONCAT(oi.quantity, \' x \', oi.product_name) ORDER BY oi.id SEPARATOR \', \') AS items
+FROM `orders` `o`
+JOIN `users` `c` ON `c`.`id` = `o`.`customer_id`
+LEFT JOIN `users` `d` ON `d`.`id` = `o`.`delivery_staff_id`
+LEFT JOIN `order_items` `oi` ON `oi`.`order_id` = `o`.`id`
+WHERE `o`.`customer_id` = 4
+GROUP BY `o`.`id`
+ORDER BY `o`.`created_at` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `o`.*, `c`.`first_name` AS `customer_first`, `c`.`last_name` AS `customer_last`, `c`.`email` AS `customer_email`, `d`.`first_name` AS `delivery_first`, `d`.`last_name` AS `delivery_last`, GROUP_CONCAT(CONCAT(oi.quantity, \' x \', oi.product_name) ORDER BY oi.id SEPARATOR \', \') AS items
+FROM `orders` `o`
+JOIN `users` `c` ON `c`.`id` = `o`.`customer_id`
+LEFT JOIN `users` `d` ON `d`.`id` = `o`.`delivery_staff_id`
+LEFT JOIN `order_items` `oi` ON `oi`.`order_id` = `o`.`id`
+WHERE `o`.`customer_id` = :o.customer_id:
+GROUP BY `o`.`id`
+ORDER BY `o`.`created_at` DESC', [...], false)
+ 5 APPPATH\Controllers\Home.php(225): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(85): App\Controllers\Home->productOrderRows(Object(CodeIgniter\Database\MySQLi\Connection), 4)
+ 7 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Home->index('products')
+ 8 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-20 06:26:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'sunsonsolar.orders' doesn't exist
+[Method: GET, Route: customer/products]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `o`.*, `c`.`first_name` AS `customer_first`, `c`.`last_name` AS `customer_last`, `c`.`email` AS `customer_email`, `d`.`first_name` AS `delivery_first`, `d`.`last_name` AS `delivery_last`, GROUP_CONCAT(CONCAT(oi.quantity, \' x \', oi.product_name) ORDER BY oi.id SEPARATOR \', \') AS items
+FROM `orders` `o`
+JOIN `users` `c` ON `c`.`id` = `o`.`customer_id`
+LEFT JOIN `users` `d` ON `d`.`id` = `o`.`delivery_staff_id`
+LEFT JOIN `order_items` `oi` ON `oi`.`order_id` = `o`.`id`
+WHERE `o`.`customer_id` = :o.customer_id:
+GROUP BY `o`.`id`
+ORDER BY `o`.`created_at` DESC', [...], false)
+ 2 APPPATH\Controllers\Home.php(225): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(85): App\Controllers\Home->productOrderRows(Object(CodeIgniter\Database\MySQLi\Connection), 4)
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Home->index('products')
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-20 06:26:57 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'sunsonsolar.orders' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `o`.*, `c`.`first_name` AS `customer_first`, `c`.`last_name` AS `customer_last`, `c`.`email` AS `customer_email`, `d`.`first_name` AS `delivery_first`, `d`.`last_name` AS `delivery_last`, GROUP_CONCAT(CONCAT(oi.quantity, \' x \', oi.product_name) ORDER BY oi.id SEPARATOR \', \') AS items
+FROM `orders` `o`
+JOIN `users` `c` ON `c`.`id` = `o`.`customer_id`
+LEFT JOIN `users` `d` ON `d`.`id` = `o`.`delivery_staff_id`
+LEFT JOIN `order_items` `oi` ON `oi`.`order_id` = `o`.`id`
+WHERE `o`.`customer_id` = 4
+GROUP BY `o`.`id`
+ORDER BY `o`.`created_at` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `o`.*, `c`.`first_name` AS `customer_first`, `c`.`last_name` AS `customer_last`, `c`.`email` AS `customer_email`, `d`.`first_name` AS `delivery_first`, `d`.`last_name` AS `delivery_last`, GROUP_CONCAT(CONCAT(oi.quantity, \' x \', oi.product_name) ORDER BY oi.id SEPARATOR \', \') AS items
+FROM `orders` `o`
+JOIN `users` `c` ON `c`.`id` = `o`.`customer_id`
+LEFT JOIN `users` `d` ON `d`.`id` = `o`.`delivery_staff_id`
+LEFT JOIN `order_items` `oi` ON `oi`.`order_id` = `o`.`id`
+WHERE `o`.`customer_id` = 4
+GROUP BY `o`.`id`
+ORDER BY `o`.`created_at` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `o`.*, `c`.`first_name` AS `customer_first`, `c`.`last_name` AS `customer_last`, `c`.`email` AS `customer_email`, `d`.`first_name` AS `delivery_first`, `d`.`last_name` AS `delivery_last`, GROUP_CONCAT(CONCAT(oi.quantity, \' x \', oi.product_name) ORDER BY oi.id SEPARATOR \', \') AS items
+FROM `orders` `o`
+JOIN `users` `c` ON `c`.`id` = `o`.`customer_id`
+LEFT JOIN `users` `d` ON `d`.`id` = `o`.`delivery_staff_id`
+LEFT JOIN `order_items` `oi` ON `oi`.`order_id` = `o`.`id`
+WHERE `o`.`customer_id` = :o.customer_id:
+GROUP BY `o`.`id`
+ORDER BY `o`.`created_at` DESC', [...], false)
+ 4 APPPATH\Controllers\Home.php(225): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Home.php(85): App\Controllers\Home->productOrderRows(Object(CodeIgniter\Database\MySQLi\Connection), 4)
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Home->index('products')
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-20 06:26:57 --> [Caused by] mysqli_sql_exception: Table 'sunsonsolar.orders' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `o`.*, `c`.`first_name` AS `customer_first`, `c`.`last_name` AS `customer_last`, `c`.`email` AS `customer_email`, `d`.`first_name` AS `delivery_first`, `d`.`last_name` AS `delivery_last`, GROUP_CONCAT(CONCAT(oi.quantity, \' x \', oi.product_name) ORDER BY oi.id SEPARATOR \', \') AS items
+FROM `orders` `o`
+JOIN `users` `c` ON `c`.`id` = `o`.`customer_id`
+LEFT JOIN `users` `d` ON `d`.`id` = `o`.`delivery_staff_id`
+LEFT JOIN `order_items` `oi` ON `oi`.`order_id` = `o`.`id`
+WHERE `o`.`customer_id` = 4
+GROUP BY `o`.`id`
+ORDER BY `o`.`created_at` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `o`.*, `c`.`first_name` AS `customer_first`, `c`.`last_name` AS `customer_last`, `c`.`email` AS `customer_email`, `d`.`first_name` AS `delivery_first`, `d`.`last_name` AS `delivery_last`, GROUP_CONCAT(CONCAT(oi.quantity, \' x \', oi.product_name) ORDER BY oi.id SEPARATOR \', \') AS items
+FROM `orders` `o`
+JOIN `users` `c` ON `c`.`id` = `o`.`customer_id`
+LEFT JOIN `users` `d` ON `d`.`id` = `o`.`delivery_staff_id`
+LEFT JOIN `order_items` `oi` ON `oi`.`order_id` = `o`.`id`
+WHERE `o`.`customer_id` = 4
+GROUP BY `o`.`id`
+ORDER BY `o`.`created_at` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `o`.*, `c`.`first_name` AS `customer_first`, `c`.`last_name` AS `customer_last`, `c`.`email` AS `customer_email`, `d`.`first_name` AS `delivery_first`, `d`.`last_name` AS `delivery_last`, GROUP_CONCAT(CONCAT(oi.quantity, \' x \', oi.product_name) ORDER BY oi.id SEPARATOR \', \') AS items
+FROM `orders` `o`
+JOIN `users` `c` ON `c`.`id` = `o`.`customer_id`
+LEFT JOIN `users` `d` ON `d`.`id` = `o`.`delivery_staff_id`
+LEFT JOIN `order_items` `oi` ON `oi`.`order_id` = `o`.`id`
+WHERE `o`.`customer_id` = 4
+GROUP BY `o`.`id`
+ORDER BY `o`.`created_at` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `o`.*, `c`.`first_name` AS `customer_first`, `c`.`last_name` AS `customer_last`, `c`.`email` AS `customer_email`, `d`.`first_name` AS `delivery_first`, `d`.`last_name` AS `delivery_last`, GROUP_CONCAT(CONCAT(oi.quantity, \' x \', oi.product_name) ORDER BY oi.id SEPARATOR \', \') AS items
+FROM `orders` `o`
+JOIN `users` `c` ON `c`.`id` = `o`.`customer_id`
+LEFT JOIN `users` `d` ON `d`.`id` = `o`.`delivery_staff_id`
+LEFT JOIN `order_items` `oi` ON `oi`.`order_id` = `o`.`id`
+WHERE `o`.`customer_id` = :o.customer_id:
+GROUP BY `o`.`id`
+ORDER BY `o`.`created_at` DESC', [...], false)
+ 5 APPPATH\Controllers\Home.php(225): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(85): App\Controllers\Home->productOrderRows(Object(CodeIgniter\Database\MySQLi\Connection), 4)
+ 7 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Home->index('products')
+ 8 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

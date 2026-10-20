@@ -100,6 +100,18 @@ $nextBooking = $upcomingBookings[0] ?? null;
                                         <h3><?= esc($product['name']) ?></h3>
                                         <p class="shop-product-description"><?= esc($product['description'] ?? '') ?></p>
                                         <div class="shop-product-bottom"><strong><?= (float) $product['price'] > 0 ? '₱' . number_format((float) $product['price'], 2) : 'Request a quote' ?></strong><a href="<?= site_url('customer/support') ?>?subject=<?= rawurlencode('Product inquiry: ' . $product['name']) ?>">Ask about item <span aria-hidden="true">↗</span></a></div>
+                                        <details class="product-order-details"><summary>Request order & delivery</summary>
+                                            <form class="portal-form" method="post" action="<?= site_url('portal/orders') ?>">
+                                                <?= csrf_field() ?><input type="hidden" name="product_id" value="<?= (int) $product['id'] ?>">
+                                                <label>Quantity<input type="number" name="quantity" min="1" max="50" value="1" required></label>
+                                                <label>Recipient name<input name="recipient_name" value="<?= esc(trim(($profile['first_name'] ?? '') . ' ' . ($profile['last_name'] ?? ''))) ?>" maxlength="150" required></label>
+                                                <label>Contact phone<input name="recipient_phone" value="<?= esc($profile['phone_number'] ?? '') ?>" maxlength="30" required></label>
+                                                <label class="form-wide">Delivery address<input name="delivery_address" value="<?= esc($profile['address'] ?? '') ?>" maxlength="500" required></label>
+                                                <label class="form-wide">Delivery notes<textarea name="delivery_notes" placeholder="Landmarks or preferred delivery instructions (optional)"></textarea></label>
+                                                <p class="legal-note form-wide">This submits a request, not a paid checkout. The team will confirm availability, final price, payment, and delivery arrangements.</p>
+                                                <button type="submit">Submit product request</button>
+                                            </form>
+                                        </details>
                                     </div>
                                 </article>
                             <?php endforeach ?>
@@ -107,6 +119,10 @@ $nextBooking = $upcomingBookings[0] ?? null;
                     <?php else: ?>
                         <p class="shop-empty-state">No products match those filters. Try another search or category.</p>
                     <?php endif ?>
+                    <section class="portal-panel full-panel" style="margin-top:24px" id="product-orders">
+                        <div class="panel-heading"><h2>Your product requests</h2><span>Delivery updates from the team</span></div>
+                        <?php if ($product_orders): ?><div class="table-wrap"><table class="portal-table"><thead><tr><th>Order</th><th>Items</th><th>Delivery address</th><th>Assigned team</th><th>Status</th><th>Tracking</th></tr></thead><tbody><?php foreach ($product_orders as $order): ?><tr><td>#<?= (int) $order['id'] ?><small><?= esc(date('M j, Y', strtotime($order['created_at']))) ?></small></td><td><?= esc($order['items'] ?? 'Product request') ?><small><?= (float) $order['total_amount'] > 0 ? '₱' . number_format((float) $order['total_amount'], 2) : 'Price to be confirmed' ?></small></td><td><?= esc($order['recipient_name']) ?><small><?= esc($order['recipient_phone']) ?> · <?= esc($order['delivery_address']) ?></small></td><td><?= esc(trim(($order['delivery_first'] ?? '') . ' ' . ($order['delivery_last'] ?? '')) ?: 'To be assigned') ?></td><td><span class="status <?= esc($order['status']) ?>"><?= esc(str_replace('_', ' ', $order['status'])) ?></span><small>Payment: <?= esc(str_replace('_', ' ', $order['payment_status'])) ?></small></td><td><?= esc($order['tracking_code'] ?: 'Not assigned') ?></td></tr><?php endforeach ?></tbody></table></div><?php else: ?><p class="empty-state">Your product requests and delivery progress will appear here.</p><?php endif ?>
+                    </section>
                 </section>
                 <?php endif ?>
 
@@ -125,6 +141,16 @@ $nextBooking = $upcomingBookings[0] ?? null;
                     <div class="panel-heading"><h2>Service history</h2><span>Completed visits</span></div>
                     <?php $completed = array_filter($bookings, static fn ($booking) => $booking['status'] === 'completed'); ?>
                     <?php if ($completed): ?><div class="table-wrap"><table class="portal-table"><thead><tr><th>Service</th><th>Date</th><th>Status</th></tr></thead><tbody><?php foreach ($completed as $booking): ?><tr><td><?= esc($booking['service_name'] ?? 'Service') ?></td><td><?= esc(date('M j, Y', strtotime($booking['scheduled_at']))) ?></td><td><span class="status">Completed</span></td></tr><?php endforeach ?></tbody></table></div><?php else: ?><p class="empty-state">Completed services will appear here.</p><?php endif ?>
+                    <div class="panel-heading" style="margin-top:20px"><h2>Share your experience</h2><span>Feedback is reviewed before appearing publicly</span></div>
+                    <?php if ($feedback_bookings): ?>
+                        <form class="portal-form" method="post" action="<?= site_url('portal/feedback') ?>">
+                            <?= csrf_field() ?>
+                            <label class="form-wide">Completed service<select name="booking_id" required><option value="">Choose a service</option><?php foreach ($feedback_bookings as $feedbackBooking): ?><option value="<?= (int) $feedbackBooking['id'] ?>"><?= esc(($feedbackBooking['service_name'] ?? 'Solar service') . ' · ' . date('M j, Y', strtotime($feedbackBooking['scheduled_at']))) ?></option><?php endforeach ?></select></label>
+                            <label class="form-wide">Your feedback<textarea name="quote" minlength="10" maxlength="2000" required placeholder="Tell us about your experience with Sun Son Solar."></textarea></label>
+                            <button type="submit">Submit feedback</button>
+                        </form>
+                    <?php else: ?><p class="empty-state">Feedback can be submitted after a service is completed. You can leave one review per completed service.</p><?php endif ?>
+                    <?php if ($customer_stories): ?><div class="panel-heading" style="margin-top:20px"><h2>Your submitted feedback</h2></div><div class="notice-list"><?php foreach ($customer_stories as $customerStory): ?><article class="notice-item"><div class="notice-meta"><span><?= esc($customerStory['service_name']) ?></span><span class="status <?= esc($customerStory['moderation_status']) ?>"><?= esc(ucfirst($customerStory['moderation_status'])) ?></span></div><p><?= esc($customerStory['quote']) ?></p></article><?php endforeach ?></div><?php endif ?>
                     <div class="panel-heading" style="margin-top:20px"><h2>Payments & receipts</h2></div>
                     <?php if ($payments): ?><div class="table-wrap"><table class="portal-table"><thead><tr><th>Receipt</th><th>Amount</th><th>Date</th><th>Status</th></tr></thead><tbody><?php foreach ($payments as $payment): ?><tr><td><?= esc($payment['receipt_number'] ?: 'Pending') ?></td><td>₱<?= number_format((float) $payment['amount'], 2) ?></td><td><?= esc($payment['paid_at'] ? date('M j, Y', strtotime($payment['paid_at'])) : '—') ?></td><td><span class="status <?= esc($payment['status']) ?>"><?= esc($payment['status']) ?></span></td></tr><?php endforeach ?></tbody></table></div><?php else: ?><p class="empty-state">No payments recorded yet.</p><?php endif ?>
                 </section>
